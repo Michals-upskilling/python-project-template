@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "project-template"
+version = "0.1.0"
+description = ""
+authors = ["Michal Batyra <michal_batyra@epam.com>"]
+readme = "README.md"
+packages = [
+    {include = "main", from = "src"},
+    {include = "utils", from = "src"},
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.10"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+pytest = "^7.2.1"
+coverage = "^7.1.0"
+mypy = "^0.991"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
